@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <a :href="item.sectionId">
+  <router-link :to="{ path: '/', hash: item.sectionId }">
     <div class="item bg-secondary">
       <div class="row">
         <i class="icon">
@@ -19,14 +19,10 @@ defineProps({
         </h3>
       </div>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <style scoped>
-a {
-  text-decoration: none;
-}
-
 .item {
   margin-top: 2rem;
   display: flex;

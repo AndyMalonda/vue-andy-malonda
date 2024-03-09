@@ -3,6 +3,7 @@ import Header from "./components/Header.vue";
 import HeaderNav from "./components/HeaderNav.vue";
 import Presentation from "./components/Presentation.vue";
 import Parcours from "./components/Parcours.vue";
+import BackToTop from "./components/helpers/BackToTop.vue";
 </script>
 
 <template>
@@ -33,6 +34,8 @@ import Parcours from "./components/Parcours.vue";
   <div id="cursus">
     <Parcours />
   </div>
+
+  <BackToTop />
 </template>
 
 <style scoped>
@@ -54,6 +57,13 @@ header {
 .logo {
   display: block;
   margin: 20px auto;
+  border: 5px solid var(--color-tertiary);
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.3);
 }
 
 .rounded-circle {
