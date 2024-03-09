@@ -21,13 +21,13 @@ defineProps({
 
 <template>
   <div class="card">
-    <div class="card__content">
-      <h3 class="card__title">{{ title }}</h3>
-      <p class="card__description">{{ description }}</p>
+    <div class="card-content">
+      <h3 class="card-title">{{ title }}</h3>
+      <p class="card-description">{{ description }}</p>
       <a
         v-if="link"
         :href="link"
-        class="card__link"
+        class="card-link"
         target="_blank"
         rel="noopener"
         >{{ linkDescription }}</a
@@ -48,24 +48,24 @@ defineProps({
   gap: 1rem;
 }
 
-.card__content {
+.card-content {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.card__title {
+.card-title {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--color-heading);
 }
 
-.card__description {
+.card-description {
   font-size: 1rem;
   color: var(--color-text);
 }
 
-.card__link {
+.card-link {
   color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
