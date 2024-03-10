@@ -1,4 +1,3 @@
-<!-- make a section component which can contain several <p> -->
 <template>
   <section class="section">
     <slot></slot>

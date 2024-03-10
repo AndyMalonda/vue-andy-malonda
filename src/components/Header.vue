@@ -1,5 +1,6 @@
 <script setup>
 import Card from "./helpers/Card.vue";
+import cv from "../assets/CV_Andy_MALONDA.pdf";
 
 defineProps({
   name: {
@@ -15,9 +16,25 @@ defineProps({
 
     <Card
       title="Développeur Fullstack"
-      description="Bienvenue sur mon site de présentation, je vous invite à naviguer pour en savoir plus sur mon profil"
-      linkDescription="Ou téléchargez mon CV en pdf"
-      link="https://vitejs.dev/guide/"
+      description="
+      <p>
+        Je suis actuellement basé à <strong>Chalon-sur-Saône</strong>,
+        et je suis prêt à déménager pour un poste qui me correspond.
+      </p>
+      <p>
+        Je recherche prioritairement sur <strong>Lyon</strong> et ses
+        environs.
+      </p>
+      <p>
+        J'admets une préférence pour les grandes villes, mais je suis
+        ouvert à toute proposition. Je suis également ouvert à des opportunités de télétravail.
+      </p>
+      <p>
+        Faites un tour sur mon site pour en savoir plus sur moi et mon parcours.
+      </p>
+      "
+      linkDescription="Ou téléchargez directement mon CV en pdf"
+      :link="cv"
     />
   </div>
 </template>

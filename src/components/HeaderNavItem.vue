@@ -10,19 +10,22 @@ defineProps({
 <template>
   <router-link :to="{ path: '/', hash: item.sectionId }">
     <div class="item bg-secondary">
-      <div class="row">
-        <i class="icon">
-          <slot name="icon"></slot>
-        </i>
-        <h3>
-          <slot name="heading"></slot>
-        </h3>
-      </div>
+      <i class="icon">
+        <slot name="icon"></slot>
+      </i>
+      <h3>
+        <slot name="heading"></slot>
+      </h3>
     </div>
   </router-link>
 </template>
 
 <style scoped>
+a {
+  text-decoration: none;
+  display: contents;
+}
+
 .item {
   margin-top: 2rem;
   display: flex;

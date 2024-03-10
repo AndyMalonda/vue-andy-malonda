@@ -1,13 +1,29 @@
 <script setup>
+import { onMounted } from "vue"; // import onMounted
 import Header from "./components/Header.vue";
 import HeaderNav from "./components/HeaderNav.vue";
 import Presentation from "./components/Presentation.vue";
-import Parcours from "./components/Parcours.vue";
+import Timeline from "./components/Timeline.vue";
+import Skills from "./components/Skills.vue";
 import BackToTop from "./components/helpers/BackToTop.vue";
+
+const setSectionViewHeight = () => {
+  const sectionViews = document.querySelectorAll(".section-view");
+  sectionViews.forEach((sectionView) => {
+    const height =
+      Math.ceil(sectionView.scrollHeight / window.innerHeight) * 100;
+    sectionView.style.height = `${height}vh`;
+  });
+};
+
+onMounted(() => {
+  setSectionViewHeight();
+  window.addEventListener("resize", setSectionViewHeight);
+});
 </script>
 
 <template>
-  <div id="landingView">
+  <div id="landingView" class="section-view">
     <header class="bg-primary rounded-left">
       <img
         alt="Portrait"
@@ -27,26 +43,27 @@ import BackToTop from "./components/helpers/BackToTop.vue";
     </main>
   </div>
 
-  <div id="aboutMe">
+  <div id="about-me" class="section-view">
     <Presentation />
   </div>
 
-  <div id="cursus">
-    <Parcours />
+  <div id="cursus" class="section-view">
+    <Timeline />
+  </div>
+
+  <div id="skills" class="section-view">
+    <Skills />
   </div>
 
   <BackToTop />
 </template>
 
 <style scoped>
-#landingView,
-#aboutMe,
-#cursus {
+.section-view {
   display: flex;
   margin-top: 1rem;
   margin-bottom: 1rem;
   flex-direction: column;
-  height: 100vh;
 }
 
 header {

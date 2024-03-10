@@ -9,7 +9,7 @@ const navItems = [
   {
     icon: UserIcon,
     heading: "Présentation",
-    sectionId: "#aboutMe",
+    sectionId: "#about-me",
   },
   {
     icon: BriefcaseIcon,

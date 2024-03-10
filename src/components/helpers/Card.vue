@@ -1,3 +1,18 @@
+<template>
+  <div class="card">
+    <h3 class="card-title">{{ title }}</h3>
+    <div class="card-content" v-html="description"></div>
+    <a
+      v-if="link"
+      :href="link"
+      class="card-link"
+      target="_blank"
+      rel="noopener"
+      >{{ linkDescription }}</a
+    >
+  </div>
+</template>
+
 <script setup>
 defineProps({
   title: {
@@ -18,23 +33,6 @@ defineProps({
   },
 });
 </script>
-
-<template>
-  <div class="card">
-    <div class="card-content">
-      <h3 class="card-title">{{ title }}</h3>
-      <p class="card-description">{{ description }}</p>
-      <a
-        v-if="link"
-        :href="link"
-        class="card-link"
-        target="_blank"
-        rel="noopener"
-        >{{ linkDescription }}</a
-      >
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .card {
