@@ -22,7 +22,7 @@ defineProps({
   },
   description: {
     type: String,
-    required: true,
+    required: false,
   },
   linkDescription: {
     type: String,

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, nextTick } from "vue"; // import onMounted and nextTick
+import { onMounted, ref } from "vue";
 import Header from "./components/Header.vue";
 import HeaderNav from "./components/HeaderNav.vue";
 import Presentation from "./components/Presentation.vue";
@@ -16,7 +16,7 @@ const sections = [
 ];
 
 const sectionsRefs = ref([]);
-console.log(sectionsRefs);
+const sectionsPositions = ref([]);
 
 const setSectionRef = (index) => {
   return (el) => {
@@ -24,27 +24,12 @@ const setSectionRef = (index) => {
   };
 };
 
-const magnetNavigation = () => {
-  const scrollPosition = window.scrollY;
-  const sectionTops = sectionsRefs.value.map((sectionRef) => {
-    return sectionRef.offsetTop;
-  });
+const scrollToSection = (index) => {
+  sectionsRefs.value[index].scrollIntoView({ behavior: "smooth" });
+};
 
-  for (let i = 0; i < sectionTops.length; i++) {
-    if (scrollPosition < sectionTops[i] + 100) {
-      const navLinks = document.querySelectorAll(".nav-link");
-      navLinks.forEach((navLink) => {
-        navLink.classList.remove("active");
-      });
-      const activeNavLink = document.querySelector(
-        `[href="#${sections[i].id}"]`
-      );
-      if (activeNavLink) {
-        activeNavLink.classList.add("active");
-      }
-      break;
-    }
-  }
+const magnetNavigation = () => {
+  console.log(window.scrollY);
 };
 
 const setSectionViewHeight = () => {
@@ -53,8 +38,16 @@ const setSectionViewHeight = () => {
     const height =
       Math.ceil(sectionView.scrollHeight / window.innerHeight) * 100;
     sectionView.style.height = `${height}vh`;
+
+    sectionsPositions.value.push(sectionView.offsetTop);
   });
 };
+
+// log key/value of sectionsPositions
+console.log(sectionsPositions.value);
+
+// we should find 4 key/value pairs
+
 
 onMounted(() => {
   setSectionViewHeight();
