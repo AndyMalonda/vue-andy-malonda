@@ -51,6 +51,7 @@ const scrollToTop = () => {
 }
 
 #back-to-top-button:hover {
+  color: white;
   background: var(--color-tertiary);
 }
 

@@ -1,5 +1,6 @@
 <template>
   <div class="card">
+    <slot name="icon"></slot>
     <h3 class="card-title">{{ title }}</h3>
     <div class="card-content" v-html="description"></div>
     <a
@@ -35,6 +36,10 @@ defineProps({
 </script>
 
 <style scoped>
+a:hover {
+  color: white;
+}
+
 .card {
   background: var(--color-background);
   border-radius: 8px;
@@ -43,6 +48,7 @@ defineProps({
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 

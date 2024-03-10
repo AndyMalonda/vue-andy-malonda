@@ -5,6 +5,7 @@ import HeaderNav from "./components/HeaderNav.vue";
 import Presentation from "./components/Presentation.vue";
 import Timeline from "./components/Timeline.vue";
 import Skills from "./components/Skills.vue";
+import Contact from "./components/Contact.vue";
 import BackToTop from "./components/helpers/BackToTop.vue";
 
 const setSectionViewHeight = () => {
@@ -53,6 +54,10 @@ onMounted(() => {
 
   <div id="skills" class="section-view">
     <Skills />
+  </div>
+
+  <div id="contact" class="section-view">
+    <Contact />
   </div>
 
   <BackToTop />
