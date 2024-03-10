@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue"; // import onMounted
+import { onMounted, ref, nextTick } from "vue"; // import onMounted and nextTick
 import Header from "./components/Header.vue";
 import HeaderNav from "./components/HeaderNav.vue";
 import Presentation from "./components/Presentation.vue";
@@ -7,6 +7,45 @@ import Timeline from "./components/Timeline.vue";
 import Skills from "./components/Skills.vue";
 import Contact from "./components/Contact.vue";
 import BackToTop from "./components/helpers/BackToTop.vue";
+
+const sections = [
+  { id: "about-me", component: Presentation },
+  { id: "cursus", component: Timeline },
+  { id: "skills", component: Skills },
+  { id: "contact", component: Contact },
+];
+
+const sectionsRefs = ref([]);
+console.log(sectionsRefs);
+
+const setSectionRef = (index) => {
+  return (el) => {
+    sectionsRefs.value[index] = el;
+  };
+};
+
+const magnetNavigation = () => {
+  const scrollPosition = window.scrollY;
+  const sectionTops = sectionsRefs.value.map((sectionRef) => {
+    return sectionRef.offsetTop;
+  });
+
+  for (let i = 0; i < sectionTops.length; i++) {
+    if (scrollPosition < sectionTops[i] + 100) {
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((navLink) => {
+        navLink.classList.remove("active");
+      });
+      const activeNavLink = document.querySelector(
+        `[href="#${sections[i].id}"]`
+      );
+      if (activeNavLink) {
+        activeNavLink.classList.add("active");
+      }
+      break;
+    }
+  }
+};
 
 const setSectionViewHeight = () => {
   const sectionViews = document.querySelectorAll(".section-view");
@@ -20,6 +59,7 @@ const setSectionViewHeight = () => {
 onMounted(() => {
   setSectionViewHeight();
   window.addEventListener("resize", setSectionViewHeight);
+  window.addEventListener("scroll", magnetNavigation);
 });
 </script>
 
@@ -44,20 +84,14 @@ onMounted(() => {
     </main>
   </div>
 
-  <div id="about-me" class="section-view">
-    <Presentation />
-  </div>
-
-  <div id="cursus" class="section-view">
-    <Timeline />
-  </div>
-
-  <div id="skills" class="section-view">
-    <Skills />
-  </div>
-
-  <div id="contact" class="section-view">
-    <Contact />
+  <div
+    v-for="(section, index) in sections"
+    :key="index"
+    :id="section.id"
+    class="section-view"
+    :ref="setSectionRef(index)"
+  >
+    <component :is="section.component" />
   </div>
 
   <BackToTop />
@@ -69,6 +103,7 @@ onMounted(() => {
   margin-top: 1rem;
   margin-bottom: 1rem;
   flex-direction: column;
+  scroll-margin-top: 80px;
 }
 
 header {
