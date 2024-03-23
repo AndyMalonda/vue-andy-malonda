@@ -1,8 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HeaderNavItem from "./components/HeaderNavItem.vue";
 import BackToTop from "./components/helpers/BackToTop.vue";
+import App from "./App.vue";
 
 const routes = [
+  {
+    path: "/",
+    component: App,
+  },
   {
     path: "/",
     component: HeaderNavItem,
