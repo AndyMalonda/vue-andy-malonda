@@ -184,5 +184,12 @@ h2 {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
 }
 </style>
