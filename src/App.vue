@@ -17,6 +17,12 @@ const sections = [
 
 const sectionsRefs = ref([]);
 
+/**
+ * Sets a reference to the section element at the given index.
+ *
+ * @param {number} index - The index of the section element.
+ * @return {function} A function that sets the reference to the section element.
+ */
 const setSectionRef = (index) => {
   return (el) => {
     sectionsRefs.value[index] = el;

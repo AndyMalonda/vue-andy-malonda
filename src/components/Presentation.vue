@@ -1,19 +1,23 @@
 <script setup>
 import Section from "./helpers/Section.vue";
+import { calculateAge } from "./helpers/dateMethods.js";
+
+const birthDate = new Date("1994-04-02");
 </script>
+
 <template>
   <Section>
     <h1 class="color-primary mb-4 section-title">Présentation</h1>
     <p class="lead mb-4">
-      Je suis <strong>Andy</strong>, un développeur passionné de 29 ans. Mon
-      parcours professionnel atypique m'a permis d'acquérir une expérience
-      variée et de développer des compétences transversales. Après avoir essayé
-      plusieurs domaines études dont la communication, j'ai décidé de me
-      réorienter vers le développement web en autodidacte. Cette démarche m'a
-      permis de découvrir ma véritable passion pour la programmation et de
-      rejoindre <strong>Vertech'</strong>, une entreprise spécialisée dans les
-      solutions MES pour l'industrie de la verrerie, en tant que
-      <strong>Software Engineer</strong>.
+      Je suis <strong>Andy</strong>, un développeur passionné de
+      {{ calculateAge(birthDate) }} ans. Mon parcours professionnel atypique m'a
+      permis d'acquérir une expérience variée et de développer des compétences
+      transversales. Après avoir essayé plusieurs domaines études dont la
+      communication, j'ai décidé de me réorienter vers le développement web en
+      autodidacte. Cette démarche m'a permis de découvrir ma véritable passion
+      pour la programmation et de rejoindre <strong>Vertech'</strong>, une
+      entreprise spécialisée dans les solutions MES pour l'industrie de la
+      verrerie, en tant que <strong>Software Engineer</strong>.
     </p>
     <p class="lead mb-4">
       Au sein de l'équipe R&D de Vertech, je conçois des applications complexes
