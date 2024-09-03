@@ -18,19 +18,22 @@ defineProps({
       title="Développeur Fullstack"
       description="
       <p>
-        Je suis actuellement basé à <strong>Chalon-sur-Saône</strong>,
-        et je suis prêt à déménager pour un poste qui me correspond.
+        J'habite à <strong>Lyon</strong>, dans le 9e (Gare de Vaise).
       </p>
       <p>
-        Je recherche prioritairement sur <strong>Lyon</strong> et ses
-        environs.
+        J'ai mon <strong>permis B</strong>, mais pas de véhicule personnel. Je donc cherche idéalement un poste situé <strong>intramuros</strong>, mais je suis ouvert à toute opportunité dans un rayon raisonnable (accessible vélo ou transports en commun).
       </p>
       <p>
-        J'admets une préférence pour les grandes villes, mais je suis
-        ouvert à toute proposition. Je suis également ouvert à des opportunités de télétravail.
+        Je n'ai pas d'exigences concernant le <strong>télétravail</strong>, je préfère généralement être au bureau et travailler en équipe.
       </p>
       <p>
-        Faites un tour sur mon site pour en savoir plus sur moi et mon parcours.
+        Je ne souhaite pas travailler dans le secteur de la défense.
+      </p>
+      <p>
+        Je suis disponible <strong>immédiatement.</strong>
+      </p>
+      <p>
+        Faites un tour sur mon site pour en savoir plus sur mon parcours et mes compétences.
       </p>
       "
       linkDescription="Ou téléchargez directement mon CV en pdf"
