@@ -15,7 +15,7 @@ defineProps({
     <h1 class="color-secondary">{{ name }}</h1>
 
     <Card
-      title="Développeur Fullstack"
+      title="Développeur Full stack C# / JavaScript / SQL"
       description="
       <p>
         J'habite à <strong>Lyon</strong>, dans le 9e (Gare de Vaise).

@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "npm run build && node deploy.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && node deploy.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -15,6 +15,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "basic-ftp": "^5.0.5",
     "dotenv": "^16.4.5",
+    "ftp-deploy-vue": "^1.0.16",
     "vue": "^3.4.15",
     "vue-router": "^4.3.0"
   },
