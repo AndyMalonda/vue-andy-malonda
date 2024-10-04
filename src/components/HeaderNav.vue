@@ -1,3 +1,4 @@
+<!-- HeaderNav -->
 <script setup>
 import HeaderNavItem from "./HeaderNavItem.vue";
 import UserIcon from "./icons/IconUser.vue";

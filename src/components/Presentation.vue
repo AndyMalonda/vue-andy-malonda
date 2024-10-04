@@ -46,6 +46,7 @@ const props = defineProps({
         technologies. Je suis ouvert à l'apprentissage continu et aux nouvelles
         expériences, alors n'hésitez pas à me contacter !
       </p> -->
+
     </Section>
   </div>
 </template>

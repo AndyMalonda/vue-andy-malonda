@@ -1,3 +1,4 @@
+<!-- App.vue -->
 <script setup>
 import { onMounted, ref } from "vue";
 import Presentation from "./components/Presentation.vue";
@@ -26,8 +27,8 @@ onMounted(async () => {
 const sections = [
   { id: "landing-view", component: LandingView },
   { id: "about-me", component: Presentation },
-  { id: "cursus", component: Timeline },
   { id: "skills", component: Skills },
+  { id: "cursus", component: Timeline },
   { id: "contact", component: Contact },
 ];
 
