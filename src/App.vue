@@ -1,11 +1,27 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { onMounted, ref } from "vue";
 import Presentation from "./components/Presentation.vue";
 import Timeline from "./components/Timeline.vue";
 import Skills from "./components/Skills.vue";
 import Contact from "./components/Contact.vue";
 import BackToTop from "./components/helpers/BackToTop.vue";
 import LandingView from "./components/LandingView.vue";
+
+const resumeData = ref(null);
+
+onMounted(async () => {
+  try {
+    const response = await fetch('/src/assets/resume.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    resumeData.value = await response.json();
+  } catch (error) {
+    console.error('Failed to fetch resume data:', error);
+  }
+
+  console.log(resumeData.value);
+});
 
 const sections = [
   { id: "landing-view", component: LandingView },
@@ -23,45 +39,6 @@ const setSectionRef = (index) => {
   };
 };
 
-// let scrollTimeout;
-
-// const handleScroll = () => {
-//   clearTimeout(scrollTimeout);
-//   scrollTimeout = setTimeout(() => {
-//     const nearestSection = findNearestSection();
-//     if (nearestSection) {
-//       scrollToSection(nearestSection);
-//     }
-//   }, 150); // Adjust this value to change the delay after scrolling stops
-// };
-
-// const findNearestSection = () => {
-//   const scrollPosition = window.scrollY + window.innerHeight / 2;
-//   let nearestSection = null;
-//   let minDistance = Infinity;
-
-//   sectionsRefs.value.forEach((section) => {
-//     const distance = Math.abs(section.offsetTop - scrollPosition);
-//     if (distance < minDistance) {
-//       minDistance = distance;
-//       nearestSection = section;
-//     }
-//   });
-
-//   return nearestSection;
-// };
-
-// const scrollToSection = (section) => {
-//   section.scrollIntoView({ behavior: "smooth" });
-// };
-
-// onMounted(() => {
-//   window.addEventListener("scroll", handleScroll);
-// });
-
-// onUnmounted(() => {
-//   window.removeEventListener("scroll", handleScroll);
-// });
 </script>
 
 <template>
@@ -72,8 +49,8 @@ const setSectionRef = (index) => {
     class="section-view"
     :ref="setSectionRef(index)"
   >
-    <component :is="section.component" />
-  </div>
+  <component :is="section.component" :resume-data="resumeData" />
+</div>
 
   <BackToTop />
 </template>

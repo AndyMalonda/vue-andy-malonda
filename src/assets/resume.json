@@ -1,0 +1,181 @@
+{
+    "basics": {
+        "name": "Andy Malonda",
+        "birthDate": "1994-04-02",
+        "label": "Développeur Full Stack .NET / JavaScript",
+        "image": "https://media.licdn.com/dms/image/v2/C4D03AQHgU0jloXzqiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1629208546339?e=1733356800&v=beta&t=tvPGaaDmlC267WaKvflRi2XaDBcadEJBxi2S4Q95yEg",
+        "email": "andy.malonda1@gmail.com",
+        "phone": "06 36 44 29 **",
+        "url": "https://andymalonda.fr",
+        "summary": "<strong>Développeur Full Stack</strong> avec plus de 2 ans d'expérience en conception et développement d'applications pour l'industrie. Passionné par l'amélioration continue et la résolution de problèmes, j'ai travaillé sur des projets en .NET, JavaScript et bases de données Oracle/MySQL. Je cherche à élargir mes compétences en Angular et Vue.js.",
+        "location": {
+            "address": "",
+            "postalCode": "69009",
+            "city": "Lyon",
+            "countryCode": "FR",
+            "region": "Auvergne-Rhône-Alpes"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "andy-malonda",
+                "url": "https://www.linkedin.com/in/andy-malonda"
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "Vertech",
+            "position": "Développeur logiciel",
+            "startDate": "2022-04-01",
+            "endDate": "2024-09-01",
+            "summary": "Participation au développement d'applications spécifiques pour l'industrie verrière, incluant la génération de rapports, l'extraction de données, et la maintenance d'outils complexes. Gestion des bases de données Oracle/MySQL, déploiement des solutions, et support technique pour les clients.",
+            "highlights": [
+                "Conception et développement des applications SILXReport et SILXTractor.",
+                "Développement d'applications en Node.js pour les communications ERP et les envois planifiés.",
+                "Déploiement, investigations et résolutions de problèmes sur environnements Windows et Docker.",
+                "Migration des bases de données Oracle vers MySQL sous Docker.",
+                "Animation de réunions Agile telles que les rétrospectives et revues de sprint.",
+                "Mise en place d'intégration continue avec Jenkins et réalisation de tests unitaires avec Selenium.",
+                "Assistance et support technique, résolution rapide des bugs clients dans des contextes de production industrielle.",
+                "Vérification de l'intégrité des données et résolution des problèmes dans les bases de données."
+            ]
+        },
+        {
+            "company": "Uber",
+            "position": "Représentant service client",
+            "startDate": "2019-08",
+            "endDate": "2020-08",
+            "summary": "COE Specialist II - Point de contact de l'équipe en charge des coursiers partenaires Uber Eats",
+            "highlights": [
+                "Appels inbound and outbound",
+                "Traitement de tickets",
+                "Mentoring",
+                "Communication interne",
+                "Conception et rédaction de process"
+            ]
+        },
+        {
+            "company": "Teleperformance",
+            "position": "Téléconseiller",
+            "startDate": "2018-04",
+            "endDate": "2019-08",
+            "summary": "Travail pour une grande enseigne de voyages en ligne et une entreprise de vente de fournitures de bureau destinée aux professionnels",
+            "highlights": [
+                "Résolution de problèmes",
+                "Contact client",
+                "Relation B2B",
+                "Suivi affaires",
+                "Prise de commande"
+            ]
+        },
+        {
+            "company": "Divers emplois",
+            "position": "Manutention, Restauration, Accueil, Livraison, Nettoyage, et plus",
+            "startDate": "2012",
+            "endDate": "2018",
+            "summary": "Principalement en intérim, Lyon, France",
+            "highlights": [
+                "Polyvalence",
+                "Adaptabilité",
+                "Travail en équipe",
+                "Gestion du stress"
+            ]
+        }
+
+    ],
+    "education": [
+        {
+            "institution": "OpenClassrooms",
+            "url": "https://openclassrooms.com/",
+            "area": "Développement web et mobile",
+            "studyType": "Diplôme",
+            "startDate": "2022-01-01",
+            "endDate": "2022-12-01"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Développement",
+            "keywords": [
+                "C#",
+                ".NET Core",
+                "JavaScript",
+                "Vue.js",
+                "CSS",
+                "SASS",
+                "Bootstrap",
+                "jQuery",
+                "SQL"
+            ]
+        },
+        {
+            "name": "BDD et ORM",
+            "keywords": [
+                "Oracle",
+                "MySQL",
+                "NHibernate"
+            ]
+        },
+        {
+            "name": "Outils",
+            "keywords": [
+                "Docker",
+                "Git",
+                "Jenkins",
+                "Powershell",
+                "Selenium"
+            ]
+        },
+        {
+            "name": "Méthodologies",
+            "keywords": [
+                "Agile / Scrum",
+                "Intégration continue"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Français"
+        },
+        {
+            "language": "Anglais"
+        }
+    ],
+    "projects": [
+        {
+            "name": "SILXReport",
+            "startDate": "2022-04-01",
+            "endDate": "2024-09-01",
+            "description": "Application permettant aux clients de générer et d'exporter des rapports personnalisés en PDF ou Excel, répondant aux besoins spécifiques des utilisateurs.",
+            "highlights": [
+                "Création de nouveaux modèles de rapports personnalisés.",
+                "Génération de rapports PDF et Excel.",
+                "Développement de fonctionnalités spéciales comme la signature électronique."
+            ]
+        },
+        {
+            "name": "SILXTractor",
+            "startDate": "2022-04-01",
+            "endDate": "2024-09-01",
+            "description": "Application d'extraction de données avec export de grilles et graphiques, ainsi que la planification d'envois de rapports complexes.",
+            "highlights": [
+                "Implémentation de fonctionnalités de filtrage et de tri des données.",
+                "Exportation de grilles, graphiques et composants complexes (grilles pivot, données groupées, graphiques dynamiques).",
+                "Gestion des favoris et des paramètres utilisateur, et planification d'envoi de rapports."
+            ]
+        },
+        {
+            "name": "Site personnel andymalonda.fr",
+            "startDate": "2024-01-01",
+            "endDate": "2024-09-01",
+            "description": "Site personnel développé en Vue.js pour présenter mes compétences, mon parcours et mes projets professionnels.",
+            "highlights": [
+                "Utilisation de Vue.js pour le développement front-end.",
+                "Hébergement sur un serveur en ligne et développement d'un outil de mise en ligne automatique."
+            ],
+            "url": "https://andymalonda.fr"
+        }
+    ]
+}

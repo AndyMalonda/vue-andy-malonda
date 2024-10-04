@@ -31,16 +31,13 @@ a {
   display: flex;
   position: relative;
   cursor: pointer;
-}
-
-.item {
-  position: relative;
-  transition: all 0.5s ease;
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .item:hover {
   background: var(--color-tertiary);
   color: white;
+  transform: scale(1.03); /* Add a slight scaling effect for better visual feedback */
 }
 
 .item:hover .icon {
@@ -68,14 +65,15 @@ a {
   margin-left: 1rem;
 }
 
+/* Icon styling */
 i {
   display: flex;
   place-items: center;
   place-content: center;
   width: var(--nav-icon-size);
   height: var(--nav-icon-size);
-
   color: var(--color-text);
+  transition: color 0.5s ease, transform 0.5s ease; /* Smooth transitions for color and hover effects */
 }
 
 h3 {
@@ -83,6 +81,22 @@ h3 {
   font-weight: 500;
   margin-bottom: 0.4rem;
   color: white;
+  transition: color 0.5s ease, opacity 0.5s ease; /* Improve text transition effects */
+}
+
+/* Styles for medium+ screens */
+@media (min-width: 768px) {
+  .item {
+    padding: 1rem; /* Add more padding on medium+ screens */
+  }
+
+  i {
+    font-size: 1.2rem; /* Slightly larger icon on wider screens */
+  }
+
+  h3 {
+    font-size: 1.3rem; /* Adjust heading size for medium+ screens */
+  }
 }
 
 @media (min-width: 1024px) {
@@ -131,6 +145,39 @@ h3 {
 
   .item:last-of-type:after {
     display: none;
+  }
+}
+
+/* Styles for small screens */
+@media (max-width: 767px) {
+  .item {
+    margin-top: 1rem;
+    display: block;
+    cursor: default;
+    transition: none;
+  }
+
+  .item:hover {
+    background: none;
+    color: inherit;
+    transform: none;
+  }
+
+  .icon,
+  i {
+    display: none; /* Hide icons on small screens */
+  }
+
+  .details {
+    margin-left: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    color: white;
+    transition: none;
   }
 }
 </style>

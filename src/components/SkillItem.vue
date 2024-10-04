@@ -35,6 +35,7 @@ export default {
 
 <style scoped>
 .card {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -72,5 +73,30 @@ export default {
 
 .card:hover .card-description {
   opacity: 1;
+}
+
+/* Styles for medium screens */
+@media (max-width: 1024px) {
+  .card-description {
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+  .card {
+    transition: none; /* Remove transition for small screens */
+  }
+
+  .card:hover {
+    transform: none; /* Remove transform effect for small screens */
+  }
+
+  .card-description {
+    opacity: 1; /* Always display text on small screens */
+    transition: none; /* Remove transition for small screens */
+  }
 }
 </style>
