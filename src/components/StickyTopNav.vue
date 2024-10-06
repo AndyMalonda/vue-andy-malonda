@@ -45,7 +45,7 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Initial check
+  handleScroll();
 });
 
 onUnmounted(() => {
@@ -59,22 +59,26 @@ onUnmounted(() => {
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
-  background-color: var(--theme-background-color, #ffffff); /* Use theme background color */
+  background-color: var(--theme-background-color, #ffffff);
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px; /* Set a fixed height */
+  height: var(--top-desktop-nav-height);
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-  border-bottom-left-radius: 15px; /* Add border radius to the bottom */
-  border-bottom-right-radius: 15px; /* Add border radius to the bottom */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visual separation */
+  transition: height 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-top-nav:hover {
+  height: calc(var(--top-desktop-nav-height) + 30px);
 }
 
 .nav-link {
   display: flex;
-  flex: 1; /* Distribute buttons equally horizontally */
-  height: 100%; /* Make buttons 100% height */
+  flex: 1;
+  height: 100%;
   text-decoration: none;
 }
 
@@ -87,18 +91,17 @@ onUnmounted(() => {
   height: 100%;
   background: none;
   border: none;
-  border-bottom-left-radius: 8px; /* Round bottom-left corner */
-  border-bottom-right-radius: 8px; /* Round bottom-right corner */
-  transition: color 0.3s ease, transform 0.3s ease;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  color: var(--theme-text-color, #333); /* Use theme text color */
+  color: var(--theme-text-color, #333);
 }
 
 .nav-button:hover,
 .nav-link.active .nav-button {
-  color: var(--color-secondary); /* Change text color on hover or when active */
   transform: translateY(-3px);
-  text-decoration: underline var(--color-secondary); /* Add underline on hover or when active */
+  text-decoration: underline;
 }
 
 .nav-icon {
@@ -111,5 +114,10 @@ onUnmounted(() => {
 .nav-button:hover .nav-icon,
 .nav-link.active .nav-icon {
   transform: scale(1.1);
+}
+
+.nav-link:hover .nav-button {
+    font-weight: bold;
+    color: var(--color-primary);
 }
 </style>

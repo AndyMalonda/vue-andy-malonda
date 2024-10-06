@@ -31,8 +31,8 @@ a,
 @media (hover: hover) {
   a:hover {
     text-decoration: none;
-    color: white;
-    background-color: var(--bordeaux-lighter);
+    /* color: white; */
+    /* background-color: var(--bordeaux-lighter); */
   }
 }
 

@@ -37,8 +37,8 @@ const sortedWorkData = computed(() => {
             Depuis {{ formatDate(item.startDate) }} ({{ item.duration }})
           </span>
         </div>
-        <h3>{{ item.position }}</h3>
-        <p>{{ item.company }}</p>
+        <h3 v-html="item.position"></h3>
+        <p v-html="item.company"></p>
         <div class="details">
           <p v-if="item.summary">
             <strong>Description:</strong>
@@ -49,9 +49,7 @@ const sortedWorkData = computed(() => {
             <strong>Missions:</strong>
             <br />
             <ul>
-              <li v-for="(highlight, highlightIndex) in item.highlights" :key="highlightIndex">
-                {{ highlight }}
-              </li>
+              <li v-for="(highlight, highlightIndex) in item.highlights" :key="highlightIndex" v-html="highlight"></li>
             </ul>
           </p>
         </div>

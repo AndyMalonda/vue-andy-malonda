@@ -11,7 +11,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="skills-container" v-if="resumeData && resumeData.skills && resumeData.skills.length">
+  <h1 class="color-primary mb-4 section-title">Compétences</h1>
+    <div class="skills-container" v-if="resumeData && resumeData.skills && resumeData.skills.length">
     <div 
       class="skills-section" 
       v-for="(section, index) in resumeData.skills" 

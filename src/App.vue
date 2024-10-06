@@ -11,12 +11,14 @@ import LandingView from "@/components/LandingView.vue";
 import HeaderNav from "@/components/HeaderNav.vue";
 import MobileTopNav from "@/components/MobileTopNav.vue";
 import StickyTopNav from "@/components/StickyTopNav.vue";
+import Projects from "@/components/Projects.vue";
 
 // Icons
 import UserIcon from "@/components/icons/IconUser.vue";
 import BriefcaseIcon from "@/components/icons/IconBriefcase.vue";
 import ToolsIcon from "@/components/icons/IconTools.vue";
 import ChatIcon from "@/components/icons/IconChat.vue";
+// import ProjectIcon from "@/components/icons/IconProject.vue"; // Add an icon for projects
 
 const resumeData = ref(null);
 
@@ -48,6 +50,11 @@ const sections = [
     id: "cursus",
     component: Timeline,
     navItem: { icon: BriefcaseIcon, heading: "Parcours" },
+  },
+  {
+    id: "projects",
+    component: Projects,
+    navItem: { icon: null, heading: "Projets" },
   },
   {
     id: "contact",
@@ -145,7 +152,6 @@ onMounted(() => {
 }
 
 .section-view {
-  min-height: 100vh;
   margin-bottom: 1rem;
   scroll-margin-top: 80px;
 }

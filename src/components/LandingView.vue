@@ -32,6 +32,10 @@ import HeaderNav from "./HeaderNav.vue";
   flex-direction: column;
 }
 
+#landingView {
+  height: 100vh;
+}
+
 header {
   line-height: 1.5;
   padding-top: 1rem;

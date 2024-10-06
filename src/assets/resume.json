@@ -7,7 +7,7 @@
         "email": "andy.malonda1@gmail.com",
         "phone": "06 36 44 29 **",
         "url": "https://andymalonda.fr",
-        "summary": "<strong>Développeur Full Stack</strong> avec plus de 2 ans d'expérience en conception et développement d'applications pour l'industrie. Passionné par l'amélioration continue et la résolution de problèmes, j'ai travaillé sur des projets en .NET, JavaScript et bases de données Oracle/MySQL. Je cherche à élargir mes compétences en Angular et Vue.js.",
+        "summary": "<strong>Développeur Full Stack</strong> avec plus de 2 ans d'expérience en conception et développement d'applications pour l'industrie. Passionné par l'amélioration continue et la résolution de problèmes, j'ai travaillé sur des projets en .NET, JavaScript et bases de données Oracle/MySQL. Je cherche à élargir mes compétences en Angular et Vue.js.<br>Mon parcours professionnel atypique m'a permis d'acquérir une expérience variée et de développer des compétences transversales. Après avoir essayé plusieurs domaines études dont la communication, j'ai décidé de me réorienter vers le développement web en autodidacte. Cette démarche m'a permis de découvrir ma véritable passion pour la programmation et de rejoindre Vertech', une entreprise spécialisée dans les solutions MES pour l'industrie de la verrerie, en tant que développeur full stack.",
         "location": {
             "address": "",
             "postalCode": "69009",
@@ -29,16 +29,13 @@
             "position": "Développeur logiciel",
             "startDate": "2022-04-01",
             "endDate": "2024-09-01",
-            "summary": "Participation au développement d'applications spécifiques pour l'industrie verrière, incluant la génération de rapports, l'extraction de données, et la maintenance d'outils complexes. Gestion des bases de données Oracle/MySQL, déploiement des solutions, et support technique pour les clients.",
+            "summary": "Participation au développement d'applications spécifiques pour l'industrie verrière, incluant la génération de rapports, l'extraction de données, et la maintenance d'outils complexes. Gestion des bases de données Oracle/MySQL, déploiement des solutions, et support technique pour les clients.<br><strong>Environnement Visual Studio, C# .NET, Javascript, jQuery, KendoUI, NHibernate, Docker, Jenkins.</strong>",
             "highlights": [
-                "Conception et développement des applications SILXReport et SILXTractor.",
-                "Développement d'applications en Node.js pour les communications ERP et les envois planifiés.",
-                "Déploiement, investigations et résolutions de problèmes sur environnements Windows et Docker.",
-                "Migration des bases de données Oracle vers MySQL sous Docker.",
-                "Animation de réunions Agile telles que les rétrospectives et revues de sprint.",
-                "Mise en place d'intégration continue avec Jenkins et réalisation de tests unitaires avec Selenium.",
-                "Assistance et support technique, résolution rapide des bugs clients dans des contextes de production industrielle.",
-                "Vérification de l'intégrité des données et résolution des problèmes dans les bases de données."
+                "Conception et développement des applications SILXReport et SILXTractor entièrement développés par Vertech.<ul><li>SILXReport :<br>Création de nouveaux modèles de rapports et personnalisation des rapports en fonction des besoins spécifiques des clients.<br> Gestion filtrage, documentation avancée, rédaction des requêtes stockées sur MongoDB</li><li>SILXTractor :<br>Extraction de données via NHibernate avec export de grilles et graphiques.<br>Implémentation et maintenance de composants complexes (ex données groupées, grille pivot).<br>Implémentation de fonctionnalités avancées de filtrage et de tri des données.<br>Gestion des favoris, planification d'envois.</li></ul>",
+                "Gestion des bases de données :<ul><li>Migration des bases de données Oracle vers MySQL sous Docker, avec adaptation des schémas de données et procédures stockées.</li><li>Création et modification des structures existantes (tables, colonnes, procédures stockées).</li><li>Vérification de l'intégrité des données et résolution des problèmes sur les bases Oracle et MySQL.</li></ul>",
+                "Développement d'applications Node.js pour des tâches spécifiques :<ul><li>Communication avec les systèmes ERP.</li><li>Gestion de formulaires et envois planifiés de mails ou de trames XML.</li></ul>",
+                "Participation active à l'amélioration des processus de développement :<ul><li>Animation de réunions Agile (rétrospectives, revues de sprint).</li><li>Mise en place de pipelines d'intégration continue avec Jenkins.</li><li>Réalisation de tests unitaires et fonctionnels avec Selenium.</li></ul>",
+                "Assistance technique et support client : résolution rapide des bugs critiques dans des environnements de production industrielle."
             ]
         },
         {
@@ -82,7 +79,6 @@
                 "Gestion du stress"
             ]
         }
-
     ],
     "education": [
         {
@@ -98,31 +94,31 @@
         {
             "name": "Développement",
             "keywords": [
-                "C#",
-                ".NET Core",
-                "JavaScript",
-                "<i class='fa-brands fa-vuejs'> Vue.js",
-                "CSS",
-                "SASS",
-                "Bootstrap",
-                "jQuery",
-                "SQL"
+                "<i class='fa-brands fa-microsoft'></i> C#",
+                "<i class='fa-brands fa-microsoft'></i> .NET Core",
+                "<i class='fa-brands fa-node-js'></i> Node.js",
+                "<i class='fa-brands fa-js'></i> JavaScript",
+                "<i class='fa-brands fa-vuejs'></i> Vue.js",
+                "<i class='fa-brands fa-css3'></i> CSS",
+                "<i class='fa-brands fa-html5'></i> HTML",
+                "<i class='fa-brands fa-bootstrap'></i> Bootstrap",
+                "<i class='fa-brands fa-jquery'></i> jQuery"
             ]
         },
         {
             "name": "BDD et ORM",
             "keywords": [
-                "Oracle",
-                "MySQL",
-                "NHibernate"
+                "<i class='fa-solid fa-database'></i> Oracle",
+                "<i class='fa-solid fa-database'></i> MySQL",
+                "<i class='fa-solid fa-database'></i> NHibernate"
             ]
         },
         {
             "name": "Outils",
             "keywords": [
                 "Docker",
-                "Git",
-                "Jenkins",
+                "<i class='fa-brands fa-git'></i> Git",
+                "<i class='fa-brands fa-jenkins'></i> Jenkins",
                 "Powershell",
                 "Selenium"
             ]
@@ -145,37 +141,42 @@
     ],
     "projects": [
         {
-            "name": "SILXReport",
-            "startDate": "2022-04-01",
-            "endDate": "2024-09-01",
-            "description": "Application permettant aux clients de générer et d'exporter des rapports personnalisés en PDF ou Excel, répondant aux besoins spécifiques des utilisateurs.",
+            "name": "andymalonda.fr",
+            "description": "Site personnel développé en Vue.js sans utilisation de librairie UI externe, avec pour objectif de rendre le projet générique pour la prise en charge de JSON resume.",
             "highlights": [
-                "Création de nouveaux modèles de rapports personnalisés.",
-                "Génération de rapports PDF et Excel.",
-                "Développement de fonctionnalités spéciales comme la signature électronique."
-            ]
-        },
-        {
-            "name": "SILXTractor",
-            "startDate": "2022-04-01",
-            "endDate": "2024-09-01",
-            "description": "Application d'extraction de données avec export de grilles et graphiques, ainsi que la planification d'envois de rapports complexes.",
-            "highlights": [
-                "Implémentation de fonctionnalités de filtrage et de tri des données.",
-                "Exportation de grilles, graphiques et composants complexes (grilles pivot, données groupées, graphiques dynamiques).",
-                "Gestion des favoris et des paramètres utilisateur, et planification d'envoi de rapports."
-            ]
-        },
-        {
-            "name": "Site personnel andymalonda.fr",
-            "startDate": "2024-01-01",
-            "endDate": "2024-09-01",
-            "description": "Site personnel développé en Vue.js pour présenter mes compétences, mon parcours et mes projets professionnels.",
-            "highlights": [
-                "Utilisation de Vue.js pour le développement front-end.",
-                "Hébergement sur un serveur en ligne et développement d'un outil de mise en ligne automatique."
+                "Développement full Vue.js sans librairies UI externes.",
+                "Prise en charge future du schéma JSON resume pour structurer les informations du CV."
             ],
-            "url": "https://andymalonda.fr"
+            "url": "(vous y êtes)"
+        },
+        {
+            "name": "Déploiement automatique Vue.js",
+            "description": "Package npm pour déployer des fichiers d'application Vue.js sur un serveur FTP.",
+            "highlights": [
+                "Se connecte à un serveur FTP, purges le contenu existant et déploie les fichiers du répertoire dist.",
+                "Utilise basic-ftp et dotenv pour la configuration des identifiants.",
+                "Commande npm run deploy pour déclencher le déploiement."
+            ],
+            "url": "<a href='https://www.npmjs.com/package/ftp-deploy-vue' target='_blank'><i class='fa-brands fa-github'></i></a> - <a href='https://www.npmjs.com/package/ftp-deploy-vue' target='_blank'><i class='fa-brands fa-npm'></i></a>"
+        },
+        {
+            "name": "Script extraction MySQL en CSV",
+            "description": "Script Bash pour exporter des données MySQL vers un fichier CSV chaque mois.",
+            "highlights": [
+                "Utilisation de variables d'environnement pour configurer la connexion MySQL et les chemins d'exportation.",
+                "Exécution planifiée avec gestion des erreurs et création automatique des répertoires nécessaires."
+            ],
+            "url": "<i class='fa-brands fa-github'></i>"
+        },
+        {
+            "name": "CSV Parser",
+            "description": "Utilitaire web pour le chargement, la visualisation, l'édition et la conversion de fichiers CSV.",
+            "highlights": [
+                "Support de conversion vers .json, .md, .xls.",
+                "Choix des séparateurs et caractères d'échappement.",
+                "HTML minifié pour téléchargement et mise en favori."
+            ],
+            "url": "<i class='fa-brands fa-github'></i>"
         }
     ]
 }

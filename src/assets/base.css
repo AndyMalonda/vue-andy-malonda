@@ -47,6 +47,7 @@
 /* preferred heights etc */
 :root {
   --nav-item-height: 50px;
+  --top-desktop-nav-height: 50px;
 }
 
 @media (prefers-color-scheme: dark) {
