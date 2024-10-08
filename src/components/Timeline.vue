@@ -13,7 +13,7 @@ const props = defineProps({
   },
 });
 
-// Automatically compute processed work data when resumeData changes
+// Automatiquement calculer les données triées et avec la durée pour chaque élément
 const sortedWorkData = computed(() => {
   if (props.resumeData && props.resumeData.work) {
     const workWithDuration = addDurationToData(props.resumeData.work);
@@ -39,19 +39,41 @@ const sortedWorkData = computed(() => {
         </div>
         <h3 v-html="item.position"></h3>
         <p v-html="item.company"></p>
+        <p v-if="item.summary">
+          <em v-html="item.summary"></em>
+        </p>
+
         <div class="details">
-          <p v-if="item.summary">
-            <strong>Description:</strong>
-            <br />
-            <span v-html="item.summary"></span>
-          </p>
-          <p v-if="item.highlights.length">
-            <strong>Missions:</strong>
-            <br />
-            <ul>
-              <li v-for="(highlight, highlightIndex) in item.highlights" :key="highlightIndex" v-html="highlight"></li>
-            </ul>
-          </p>
+
+          <div v-if="item.projects && item.projects.length">
+            <!-- Affichage des projets principaux -->
+            <div v-for="(project, projectIndex) in item.projects" :key="projectIndex">
+              <strong>{{ project.name }}</strong>
+              <p v-if="project.description">{{ project.description }}</p>
+
+              <!-- Affichage des sous-projets s'ils existent -->
+              <ul v-if="project.subProjects && project.subProjects.length">
+                <li v-for="(subProject, subProjectIndex) in project.subProjects" :key="subProjectIndex">
+                  <strong>{{ subProject.name }}</strong>
+                  <p>{{ subProject.description }}</p>
+
+                  <!-- Boucle pour les highlights des sous-projets -->
+                  <ul v-if="subProject.highlights && subProject.highlights.length">
+                    <li v-for="(highlight, highlightIndex) in subProject.highlights" :key="highlightIndex">
+                      {{ highlight }}
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- Si pas de sous-projets, on affiche les highlights des projets -->
+              <ul v-else-if="project.highlights && project.highlights.length">
+                <li v-for="(highlight, highlightIndex) in project.highlights" :key="highlightIndex">
+                  {{ highlight }}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -75,7 +97,6 @@ const sortedWorkData = computed(() => {
   background-color: var(--vt-c-divider-light-1);
 }
 
-
 .event {
   position: relative;
   margin: 1.5rem 0;
@@ -90,7 +111,7 @@ const sortedWorkData = computed(() => {
 }
 
 .event:hover {
-  box-shadow: 0 4px 8px var(--vt-c-divider-light-1)
+  box-shadow: 0 4px 8px var(--vt-c-divider-light-1);
 }
 
 .icon-wrapper {

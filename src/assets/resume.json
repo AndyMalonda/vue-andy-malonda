@@ -25,17 +25,91 @@
     },
     "work": [
         {
-            "company": "Vertech",
             "position": "Développeur logiciel",
-            "startDate": "2022-04-01",
-            "endDate": "2024-09-01",
-            "summary": "Participation au développement d'applications spécifiques pour l'industrie verrière, incluant la génération de rapports, l'extraction de données, et la maintenance d'outils complexes. Gestion des bases de données Oracle/MySQL, déploiement des solutions, et support technique pour les clients.<br><strong>Environnement Visual Studio, C# .NET, Javascript, jQuery, KendoUI, NHibernate, Docker, Jenkins.</strong>",
-            "highlights": [
-                "Conception et développement des applications SILXReport et SILXTractor entièrement développés par Vertech.<ul><li>SILXReport :<br>Création de nouveaux modèles de rapports et personnalisation des rapports en fonction des besoins spécifiques des clients.<br> Gestion filtrage, documentation avancée, rédaction des requêtes stockées sur MongoDB</li><li>SILXTractor :<br>Extraction de données via NHibernate avec export de grilles et graphiques.<br>Implémentation et maintenance de composants complexes (ex données groupées, grille pivot).<br>Implémentation de fonctionnalités avancées de filtrage et de tri des données.<br>Gestion des favoris, planification d'envois.</li></ul>",
-                "Gestion des bases de données :<ul><li>Migration des bases de données Oracle vers MySQL sous Docker, avec adaptation des schémas de données et procédures stockées.</li><li>Création et modification des structures existantes (tables, colonnes, procédures stockées).</li><li>Vérification de l'intégrité des données et résolution des problèmes sur les bases Oracle et MySQL.</li></ul>",
-                "Développement d'applications Node.js pour des tâches spécifiques :<ul><li>Communication avec les systèmes ERP.</li><li>Gestion de formulaires et envois planifiés de mails ou de trames XML.</li></ul>",
-                "Participation active à l'amélioration des processus de développement :<ul><li>Animation de réunions Agile (rétrospectives, revues de sprint).</li><li>Mise en place de pipelines d'intégration continue avec Jenkins.</li><li>Réalisation de tests unitaires et fonctionnels avec Selenium.</li></ul>",
-                "Assistance technique et support client : résolution rapide des bugs critiques dans des environnements de production industrielle."
+            "company": "Vertech",
+            "startDate": "2022-04",
+            "endDate": "2024-09",
+            "summary": "Conception et développement d’applications pour l’industrie verrière en utilisant C# .NET, JavaScript, et des bases de données Oracle, MySQL et MongoDB.",
+            "projects": [
+                {
+                    "name": "Suite SIL",
+                    "description": "Conception et développement d’une partie des applications de la suite SIL, développées en C# .NET avec un front-end en JavaScript, jQuery, KendoUI, et un ORM NHibernate, stockage sur bases Oracle, MySQL ou MongoDB.",
+                    "subProjects": [
+                        {
+                            "name": "Report",
+                            "description": "Conception de rapports personnalisés incluant des filtres dynamiques, export PDF/Excel, et signatures uniques. Les rapports incluaient des requêtes SQL et des templates en HTML, CSS, et JavaScript avec KendoUI.",
+                            "highlights": []
+                        },
+                        {
+                            "name": "Xtractor",
+                            "description": "Application pour l’extraction de données avec des composants avancés tels que des grilles, graphiques et grilles pivot, système de favoris, et envois planifiés.",
+                            "highlights": []
+                        },
+                        {
+                            "name": "Translation",
+                            "description": "Gestion des traductions via MongoDB et intégration dans d'autres applications avec un package NuGet.",
+                            "highlights": []
+                        }
+                    ],
+                    "highlights": []
+                },
+                {
+                    "name": "Applications Node.js",
+                    "description": "Développement d’applications Node.js pour l’interprétation des données issues des ERP clients.",
+                    "subProjects": [
+                        {
+                            "name": "Intégration ERP",
+                            "description": "Récupération et transformation des données des ERP, traitement via SOAP ou API, avec transformation des données en XML si nécessaire.",
+                            "highlights": []
+                        }
+                    ],
+                    "highlights": []
+                },
+                {
+                    "name": "Gestion des bases de données",
+                    "description": "Création et modification de tables, colonnes, procédures, et fonctions sur Oracle et MySQL, optimisation et migration vers MariaDB sous Docker.",
+                    "subProjects": [
+                        {
+                            "name": "Mise à jour et outils sur mesure",
+                            "description": "Gestion des mises à jour et développement d’outils adaptés aux besoins des équipes et clients.",
+                            "highlights": []
+                        },
+                        {
+                            "name": "Optimisations",
+                            "description": "Analyse des performances et optimisation des bases de données pour assurer leur bon fonctionnement.",
+                            "highlights": []
+                        }
+                    ],
+                    "highlights": []
+                },
+                {
+                    "name": "Méthodologie Agile",
+                    "description": "Participation active aux rétrospectives et revues de sprint pour une amélioration continue.",
+                    "subprojects": [],
+                    "highlights": []
+                },
+                {
+                    "name": "Intégration continue et tests unitaires",
+                    "description": "Mise en place de l’intégration continue avec Jenkins, réalisation de tests unitaires avec Selenium.",
+                    "subprojects": [{
+                        "name": "Automatisation des tests",
+                        "description": "Automatisation des tests et déploiements pour garantir la qualité des applications."
+                    }],
+                    "highlights": [
+                        
+                    ]
+                },
+                {
+                    "name": "Assistance technique",
+                    "description": "Assistance et support technique rapide aux clients, en minimisant les interruptions de production.",
+                    "subprojects": [{
+                        "name": "Résolution de bugs",
+                        "description": "Résolution rapide des bugs dans les environnements de production industrielle."
+                    }],
+                    "highlights": [
+                        
+                    ]
+                }
             ]
         },
         {
@@ -43,42 +117,63 @@
             "position": "Représentant service client",
             "startDate": "2019-08",
             "endDate": "2020-08",
-            "summary": "COE Specialist II - Point de contact de l'équipe en charge des coursiers partenaires Uber Eats",
-            "highlights": [
-                "Appels inbound and outbound",
-                "Traitement de tickets",
-                "Mentoring",
-                "Communication interne",
-                "Conception et rédaction de process"
+            "summary": "COE Specialist II - Point de contact pour l'équipe en charge des coursiers partenaires Uber Eats.",
+            "projects": [
+              {
+                "name": "Support des coursiers partenaires",
+                "description": "Assistance aux coursiers partenaires Uber Eats, gestion des tickets et mentoring.",
+                "highlights": [
+                  "Gestion des appels entrants et sortants (inbound/outbound)",
+                  "Traitement de tickets de support",
+                  "Mentoring de nouveaux employés",
+                  "Communication interne avec l'équipe et autres départements",
+                  "Conception et rédaction de processus opérationnels"
+                ],
+                "subprojects": []
+              }
             ]
-        },
-        {
+          },
+          {
             "company": "Teleperformance",
             "position": "Téléconseiller",
             "startDate": "2018-04",
             "endDate": "2019-08",
-            "summary": "Travail pour une grande enseigne de voyages en ligne et une entreprise de vente de fournitures de bureau destinée aux professionnels",
-            "highlights": [
-                "Résolution de problèmes",
-                "Contact client",
-                "Relation B2B",
-                "Suivi affaires",
-                "Prise de commande"
+            "summary": "Travail pour une grande enseigne de voyages en ligne et une entreprise de vente de fournitures de bureau pour professionnels.",
+            "projects": [
+              {
+                "name": "Support client voyages et fournitures de bureau",
+                "description": "Gestion des problèmes clients et suivi des commandes dans le secteur des voyages et des fournitures de bureau.",
+                "highlights": [
+                  "Résolution de problèmes clients",
+                  "Gestion des contacts clients et suivi des dossiers",
+                  "Relation B2B avec des professionnels",
+                  "Suivi des affaires en cours",
+                  "Prise et gestion des commandes"
+                ],
+                "subprojects": []
+              }
             ]
-        },
-        {
+          },
+          {
             "company": "Divers emplois",
-            "position": "Manutention, Restauration, Accueil, Livraison, Nettoyage, et plus",
+            "position": "Manutention, restauration, accueil, livraison, nettoyage, etc.",
             "startDate": "2012",
             "endDate": "2018",
-            "summary": "Principalement en intérim, Lyon, France",
-            "highlights": [
-                "Polyvalence",
-                "Adaptabilité",
-                "Travail en équipe",
-                "Gestion du stress"
+            "summary": "Divers emplois en intérim principalement à Lyon, France.",
+            "projects": [
+              {
+                "name": "Travaux temporaires polyvalents",
+                "description": "Emplois temporaires dans plusieurs secteurs pour des missions variées.",
+                "highlights": [
+                  "Polyvalence dans différents secteurs",
+                  "Adaptabilité rapide à des environnements de travail variés",
+                  "Travail en équipe et coopération",
+                  "Gestion du stress en situation de forte activité ou contrainte de temps"
+                ],
+                "subprojects": []
+              }
             ]
-        }
+          }
     ],
     "education": [
         {
@@ -147,7 +242,7 @@
                 "Développement full Vue.js sans librairies UI externes.",
                 "Prise en charge future du schéma JSON resume pour structurer les informations du CV."
             ],
-            "url": "(vous y êtes)"
+            "url": "(vous y êtes) - <a href='https://github.com/AndyMalonda/vue-andy-malonda' target='_blank'><i class='fa-brands fa-github'></i></a>"
         },
         {
             "name": "Déploiement automatique Vue.js",
@@ -157,7 +252,7 @@
                 "Utilise basic-ftp et dotenv pour la configuration des identifiants.",
                 "Commande npm run deploy pour déclencher le déploiement."
             ],
-            "url": "<a href='https://www.npmjs.com/package/ftp-deploy-vue' target='_blank'><i class='fa-brands fa-github'></i></a> - <a href='https://www.npmjs.com/package/ftp-deploy-vue' target='_blank'><i class='fa-brands fa-npm'></i></a>"
+            "url": "<a href='https://github.com/AndyMalonda/ftp-deploy-vue' target='_blank'><i class='fa-brands fa-github'></i></a> - <a href='https://www.npmjs.com/package/ftp-deploy-vue' target='_blank'><i class='fa-brands fa-npm'></i></a>"
         },
         {
             "name": "Script extraction MySQL en CSV",
@@ -166,7 +261,7 @@
                 "Utilisation de variables d'environnement pour configurer la connexion MySQL et les chemins d'exportation.",
                 "Exécution planifiée avec gestion des erreurs et création automatique des répertoires nécessaires."
             ],
-            "url": "<i class='fa-brands fa-github'></i>"
+            "url": "<a href='https://github.com/AndyMalonda/monthly-data-export' target='_blank'><i class='fa-brands fa-github'></i></a>"
         },
         {
             "name": "CSV Parser",
@@ -176,7 +271,7 @@
                 "Choix des séparateurs et caractères d'échappement.",
                 "HTML minifié pour téléchargement et mise en favori."
             ],
-            "url": "<i class='fa-brands fa-github'></i>"
+            "url": "<a href='https://github.com/AndyMalonda/csv_simple_html_utilities' target='_blank'><i class='fa-brands fa-github'></i></a>"
         }
     ]
 }

@@ -1,0 +1,73 @@
+{
+    "basics": {
+        "name": "",
+        "birthDate": "",
+        "label": "",
+        "image": "",
+        "email": "",
+        "phone": "",
+        "url": "",
+        "summary": "",
+        "location": {
+            "address": "",
+            "postalCode": "",
+            "city": "",
+            "countryCode": "",
+            "region": ""
+        },
+        "profiles": [
+            {
+                "network": "",
+                "username": "",
+                "url": ""
+            }
+        ]
+    },
+    "work": [
+        {
+            "company": "",
+            "position": "",
+            "startDate": "",
+            "endDate": "",
+            "summary": "",
+            "projects": [
+                {
+                    "name": "",
+                    "description": "",
+                    "highligts": [ "" ],
+                    "subProjects": [
+                        {
+                            "name": "",
+                            "description": "",
+                            "highligts": [ "" ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "",
+            "url": "",
+            "area": "",
+            "studyType": "",
+            "startDate": "",
+            "endDate": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "",
+            "keywords": []
+        }
+    ],
+    "projects": [
+        {
+            "name": "",
+            "description": "",
+            "highlights": [],
+            "url": ""
+        }
+    ]
+}
