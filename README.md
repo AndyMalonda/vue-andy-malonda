@@ -39,9 +39,9 @@ And paste it in the `src\assets\resume.json` file.
 
 ### Build, purge and deploy to FTP
 
-I developed that automatically build and deploy the project to an FTP server.
+I developed an npm package to automatically build and deploy the project to an FTP server.
 
-You can configure deploy.config.js to your FTP server and then run the following command:
+You can configure deploy.config.js directly or use a .env file to your FTP server and then run the following command:
 
 ```sh
 npm run deploy

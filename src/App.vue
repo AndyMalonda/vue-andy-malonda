@@ -142,13 +142,14 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
   z-index: 10;
   transition: transform 0.3s ease-in-out;
+  padding-right: 0%;
+  width: 20%;
 }
 
 .side-nav.hidden {
-  transform: translateX(100%);
+  transform: translateX(120%);
 }
 
 .section-view {

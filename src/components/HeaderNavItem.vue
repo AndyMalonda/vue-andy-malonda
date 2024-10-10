@@ -84,18 +84,17 @@ h3 {
   transition: color 0.5s ease, opacity 0.5s ease; /* Improve text transition effects */
 }
 
-/* Styles for medium+ screens */
 @media (min-width: 768px) {
   .item {
-    padding: 1rem; /* Add more padding on medium+ screens */
+    padding: 1rem;
   }
 
   i {
-    font-size: 1.2rem; /* Slightly larger icon on wider screens */
+    font-size: 1.2rem;
   }
 
   h3 {
-    font-size: 1.3rem; /* Adjust heading size for medium+ screens */
+    font-size: 1.3rem;
   }
 }
 

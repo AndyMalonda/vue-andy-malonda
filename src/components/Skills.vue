@@ -4,14 +4,14 @@ import { defineProps } from 'vue';
 // Define props to receive the resume data
 const props = defineProps({
   resumeData: {
-    type: Object, // Expecting an object containing skills data
+    type: Object,
     required: true,
   },
 });
 </script>
 
 <template>
-  <h1 class="color-primary mb-4 section-title">Compétences</h1>
+  <h2>Compétences</h2>
     <div class="skills-container" v-if="resumeData && resumeData.skills && resumeData.skills.length">
     <div 
       class="skills-section" 
@@ -30,7 +30,7 @@ const props = defineProps({
       </div>
     </div>
   </div>
-  <p v-else>Loading skills data...</p> <!-- Loading message while waiting for data -->
+  <p v-else>Loading skills data...</p>
 </template>
 
 <style scoped>
@@ -50,7 +50,6 @@ const props = defineProps({
 
 h2 {
   font-size: 1.5rem;
-  color: #333;
   margin-bottom: 1rem;
 }
 

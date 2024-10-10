@@ -14,8 +14,8 @@ const props = defineProps({
 
 <template>
   <div v-if="resumeData">
+    <h2>Présentation</h2>
     <Section>
-      <h1 class="color-primary mb-4 section-title">Présentation</h1>
       <p class="lead mb-4">
         Je suis <strong>{{ resumeData.basics.name }}</strong>, un <strong>{{ resumeData.basics.label }}</strong> de
         {{ calculateAge(new Date(resumeData.basics.birthDate)) }} ans.
